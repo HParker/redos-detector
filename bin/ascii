@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "bundler/setup"
+require "redos/detector"
+
+Redos::Detector::NFA.from_string(ARGV[0]).first.ascii
