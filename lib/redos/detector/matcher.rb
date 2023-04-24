@@ -62,33 +62,31 @@ module Redos
           end
         end
 
-        # if matched.empty?
-        #   puts "no match"
-        # else
-        #   puts "#{matched.size} matches:"
-
-        #   matched.filter { |m| (m.index - m.start) > 0 }.sort { |m| m.index - m.start }.each do |m|
-        #     puts str
-        #     print " " * m.start
-        #     print "^" * (m.index - m.start)
-        #     puts
-        #   end
-        # end
-
-        puts "GOT HEREREERER"
-        
-        if looped.empty?
-          puts "no loops"
+        if matched.empty?
+          puts "no match"
         else
-          puts "#{looped.size} loops:"
+          puts "#{matched.size} matches:"
 
-          looped.filter { |m| (m.index - m.start) > 0 }.sort { |m| m.index - m.start }.each do |m|
+          matched.filter { |m| (m.index - m.start) > 0 }.sort { |m| m.index - m.start }.each do |m|
             puts str
             print " " * m.start
             print "^" * (m.index - m.start)
             puts
           end
         end
+
+        # if looped.empty?
+        #   puts "no loops"
+        # else
+        #   puts "#{looped.size} loops:"
+
+        #   looped.filter { |m| (m.index - m.start) > 0 }.sort { |m| m.index - m.start }.each do |m|
+        #     puts str
+        #     print " " * m.start
+        #     print "^" * (m.index - m.start)
+        #     puts
+        #   end
+        # end
         matched
       end
     end

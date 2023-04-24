@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-
 # State is really just an identifier with a globally incrementing ID.
 module Redos
   module Detector
